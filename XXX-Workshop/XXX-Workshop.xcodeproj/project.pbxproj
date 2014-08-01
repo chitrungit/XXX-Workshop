@@ -14,22 +14,7 @@
 		A96547FF198B40F300F1A1DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A96547FE198B40F300F1A1DD /* main.m */; };
 		A9654803198B40F300F1A1DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9654802198B40F300F1A1DD /* AppDelegate.m */; };
 		A9654805198B40F300F1A1DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9654804198B40F300F1A1DD /* Images.xcassets */; };
-		A965480C198B40F300F1A1DD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A965480B198B40F300F1A1DD /* XCTest.framework */; };
-		A965480D198B40F300F1A1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96547F2198B40F300F1A1DD /* Foundation.framework */; };
-		A965480E198B40F300F1A1DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96547F6198B40F300F1A1DD /* UIKit.framework */; };
-		A9654816198B40F300F1A1DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9654814198B40F300F1A1DD /* InfoPlist.strings */; };
-		A9654818198B40F300F1A1DD /* XXX_WorkshopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9654817198B40F300F1A1DD /* XXX_WorkshopTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A965480F198B40F300F1A1DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A96547E7198B40F300F1A1DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A96547EE198B40F300F1A1DD;
-			remoteInfo = "XXX-Workshop";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A96547EF198B40F300F1A1DD /* XXX-Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XXX-Workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,11 +28,7 @@
 		A9654801198B40F300F1A1DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9654802198B40F300F1A1DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A9654804198B40F300F1A1DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A965480A198B40F300F1A1DD /* XXX-WorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XXX-WorkshopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A965480B198B40F300F1A1DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		A9654813198B40F300F1A1DD /* XXX-WorkshopTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XXX-WorkshopTests-Info.plist"; sourceTree = "<group>"; };
-		A9654815198B40F300F1A1DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A9654817198B40F300F1A1DD /* XXX_WorkshopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXX_WorkshopTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +42,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9654807198B40F300F1A1DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A965480C198B40F300F1A1DD /* XCTest.framework in Frameworks */,
-				A965480E198B40F300F1A1DD /* UIKit.framework in Frameworks */,
-				A965480D198B40F300F1A1DD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				A96547F8198B40F300F1A1DD /* XXX-Workshop */,
-				A9654811198B40F300F1A1DD /* XXX-WorkshopTests */,
 				A96547F1198B40F300F1A1DD /* Frameworks */,
 				A96547F0198B40F300F1A1DD /* Products */,
 			);
@@ -88,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				A96547EF198B40F300F1A1DD /* XXX-Workshop.app */,
-				A965480A198B40F300F1A1DD /* XXX-WorkshopTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,24 +95,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A9654811198B40F300F1A1DD /* XXX-WorkshopTests */ = {
-			isa = PBXGroup;
-			children = (
-				A9654817198B40F300F1A1DD /* XXX_WorkshopTests.m */,
-				A9654812198B40F300F1A1DD /* Supporting Files */,
-			);
-			path = "XXX-WorkshopTests";
-			sourceTree = "<group>";
-		};
-		A9654812198B40F300F1A1DD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A9654813198B40F300F1A1DD /* XXX-WorkshopTests-Info.plist */,
-				A9654814198B40F300F1A1DD /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,24 +115,6 @@
 			productReference = A96547EF198B40F300F1A1DD /* XXX-Workshop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A9654809198B40F300F1A1DD /* XXX-WorkshopTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A965481E198B40F300F1A1DD /* Build configuration list for PBXNativeTarget "XXX-WorkshopTests" */;
-			buildPhases = (
-				A9654806198B40F300F1A1DD /* Sources */,
-				A9654807198B40F300F1A1DD /* Frameworks */,
-				A9654808198B40F300F1A1DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9654810198B40F300F1A1DD /* PBXTargetDependency */,
-			);
-			name = "XXX-WorkshopTests";
-			productName = "XXX-WorkshopTests";
-			productReference = A965480A198B40F300F1A1DD /* XXX-WorkshopTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,11 +123,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = XXX;
-				TargetAttributes = {
-					A9654809198B40F300F1A1DD = {
-						TestTargetID = A96547EE198B40F300F1A1DD;
-					};
-				};
 			};
 			buildConfigurationList = A96547EA198B40F300F1A1DD /* Build configuration list for PBXProject "XXX-Workshop" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -209,7 +137,6 @@
 			projectRoot = "";
 			targets = (
 				A96547EE198B40F300F1A1DD /* XXX-Workshop */,
-				A9654809198B40F300F1A1DD /* XXX-WorkshopTests */,
 			);
 		};
 /* End PBXProject section */
@@ -221,14 +148,6 @@
 			files = (
 				A96547FD198B40F300F1A1DD /* InfoPlist.strings in Resources */,
 				A9654805198B40F300F1A1DD /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9654808198B40F300F1A1DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9654816198B40F300F1A1DD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,37 +163,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9654806198B40F300F1A1DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9654818198B40F300F1A1DD /* XXX_WorkshopTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A9654810198B40F300F1A1DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A96547EE198B40F300F1A1DD /* XXX-Workshop */;
-			targetProxy = A965480F198B40F300F1A1DD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A96547FB198B40F300F1A1DD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A96547FC198B40F300F1A1DD /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A9654814198B40F300F1A1DD /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9654815198B40F300F1A1DD /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -314,7 +209,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,7 +242,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -363,6 +258,7 @@
 				GCC_PREFIX_HEADER = "XXX-Workshop/XXX-Workshop-Prefix.pch";
 				INFOPLIST_FILE = "XXX-Workshop/XXX-Workshop-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -376,47 +272,8 @@
 				GCC_PREFIX_HEADER = "XXX-Workshop/XXX-Workshop-Prefix.pch";
 				INFOPLIST_FILE = "XXX-Workshop/XXX-Workshop-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		A965481F198B40F300F1A1DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XXX-Workshop.app/XXX-Workshop";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "XXX-Workshop/XXX-Workshop-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "XXX-WorkshopTests/XXX-WorkshopTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		A9654820198B40F300F1A1DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XXX-Workshop.app/XXX-Workshop";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "XXX-Workshop/XXX-Workshop-Prefix.pch";
-				INFOPLIST_FILE = "XXX-WorkshopTests/XXX-WorkshopTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -437,14 +294,6 @@
 			buildConfigurations = (
 				A965481C198B40F300F1A1DD /* Debug */,
 				A965481D198B40F300F1A1DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		A965481E198B40F300F1A1DD /* Build configuration list for PBXNativeTarget "XXX-WorkshopTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A965481F198B40F300F1A1DD /* Debug */,
-				A9654820198B40F300F1A1DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
