@@ -12,6 +12,7 @@
 		A914E021198B8B2900E01E39 /* LinearPartitionCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A914E020198B8B2900E01E39 /* LinearPartitionCollectionLayout.m */; };
 		A914E025198B92B200E01E39 /* KeyboardUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A914E024198B92B200E01E39 /* KeyboardUtility.m */; };
 		A914E029198B933D00E01E39 /* AlertViewBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A914E028198B933D00E01E39 /* AlertViewBlock.m */; };
+		A914E02E198BA04B00E01E39 /* AlphaColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A914E02D198BA04B00E01E39 /* AlphaColorView.m */; };
 		A96547F3198B40F300F1A1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96547F2198B40F300F1A1DD /* Foundation.framework */; };
 		A96547F5198B40F300F1A1DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96547F4198B40F300F1A1DD /* CoreGraphics.framework */; };
 		A96547F7198B40F300F1A1DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96547F6198B40F300F1A1DD /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 		A914E024198B92B200E01E39 /* KeyboardUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardUtility.m; sourceTree = "<group>"; };
 		A914E027198B933D00E01E39 /* AlertViewBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewBlock.h; sourceTree = "<group>"; };
 		A914E028198B933D00E01E39 /* AlertViewBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewBlock.m; sourceTree = "<group>"; };
+		A914E02C198BA04B00E01E39 /* AlphaColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaColorView.h; sourceTree = "<group>"; };
+		A914E02D198BA04B00E01E39 /* AlphaColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphaColorView.m; sourceTree = "<group>"; };
 		A96547EF198B40F300F1A1DD /* XXX-Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XXX-Workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96547F2198B40F300F1A1DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A96547F4198B40F300F1A1DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,15 @@
 			path = AlertViewBlock;
 			sourceTree = "<group>";
 		};
+		A914E02B198BA03D00E01E39 /* AlphaColorView */ = {
+			isa = PBXGroup;
+			children = (
+				A914E02C198BA04B00E01E39 /* AlphaColorView.h */,
+				A914E02D198BA04B00E01E39 /* AlphaColorView.m */,
+			);
+			path = AlphaColorView;
+			sourceTree = "<group>";
+		};
 		A96547E6198B40F300F1A1DD = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +188,7 @@
 		A9654821198B42B300F1A1DD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A914E02B198BA03D00E01E39 /* AlphaColorView */,
 				A914E026198B932500E01E39 /* AlertViewBlock */,
 				A914E022198B92B200E01E39 /* KeyboardUtility */,
 				A914E01E198B8B1600E01E39 /* LinearPartitionCollectionLayout */,
@@ -274,6 +287,7 @@
 				A914E01D198B8AD500E01E39 /* Utility.m in Sources */,
 				A9654803198B40F300F1A1DD /* AppDelegate.m in Sources */,
 				A914E021198B8B2900E01E39 /* LinearPartitionCollectionLayout.m in Sources */,
+				A914E02E198BA04B00E01E39 /* AlphaColorView.m in Sources */,
 				A9654825198B42CD00F1A1DD /* LoadingView.m in Sources */,
 				A9654833198B43AA00F1A1DD /* NavigationViewController.m in Sources */,
 				A965482E198B437500F1A1DD /* LoadingViewController.m in Sources */,
