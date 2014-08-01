@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A914E019198B83AC00E01E39 /* DLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A914E018198B83AC00E01E39 /* DLog.m */; };
+		A914E01D198B8AD500E01E39 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = A914E01C198B8AD500E01E39 /* Utility.m */; };
+		A914E021198B8B2900E01E39 /* LinearPartitionCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A914E020198B8B2900E01E39 /* LinearPartitionCollectionLayout.m */; };
+		A914E025198B92B200E01E39 /* KeyboardUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A914E024198B92B200E01E39 /* KeyboardUtility.m */; };
+		A914E029198B933D00E01E39 /* AlertViewBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A914E028198B933D00E01E39 /* AlertViewBlock.m */; };
 		A96547F3198B40F300F1A1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96547F2198B40F300F1A1DD /* Foundation.framework */; };
 		A96547F5198B40F300F1A1DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96547F4198B40F300F1A1DD /* CoreGraphics.framework */; };
 		A96547F7198B40F300F1A1DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96547F6198B40F300F1A1DD /* UIKit.framework */; };
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		A914E017198B83AC00E01E39 /* DLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLog.h; sourceTree = "<group>"; };
 		A914E018198B83AC00E01E39 /* DLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLog.m; sourceTree = "<group>"; };
+		A914E01B198B8AD500E01E39 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		A914E01C198B8AD500E01E39 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		A914E01F198B8B2900E01E39 /* LinearPartitionCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearPartitionCollectionLayout.h; sourceTree = "<group>"; };
+		A914E020198B8B2900E01E39 /* LinearPartitionCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearPartitionCollectionLayout.m; sourceTree = "<group>"; };
+		A914E023198B92B200E01E39 /* KeyboardUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardUtility.h; sourceTree = "<group>"; };
+		A914E024198B92B200E01E39 /* KeyboardUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardUtility.m; sourceTree = "<group>"; };
+		A914E027198B933D00E01E39 /* AlertViewBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewBlock.h; sourceTree = "<group>"; };
+		A914E028198B933D00E01E39 /* AlertViewBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewBlock.m; sourceTree = "<group>"; };
 		A96547EF198B40F300F1A1DD /* XXX-Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XXX-Workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96547F2198B40F300F1A1DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A96547F4198B40F300F1A1DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +81,42 @@
 				A914E018198B83AC00E01E39 /* DLog.m */,
 			);
 			path = DLog;
+			sourceTree = "<group>";
+		};
+		A914E01A198B8AC900E01E39 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A914E01B198B8AD500E01E39 /* Utility.h */,
+				A914E01C198B8AD500E01E39 /* Utility.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		A914E01E198B8B1600E01E39 /* LinearPartitionCollectionLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A914E01F198B8B2900E01E39 /* LinearPartitionCollectionLayout.h */,
+				A914E020198B8B2900E01E39 /* LinearPartitionCollectionLayout.m */,
+			);
+			path = LinearPartitionCollectionLayout;
+			sourceTree = "<group>";
+		};
+		A914E022198B92B200E01E39 /* KeyboardUtility */ = {
+			isa = PBXGroup;
+			children = (
+				A914E023198B92B200E01E39 /* KeyboardUtility.h */,
+				A914E024198B92B200E01E39 /* KeyboardUtility.m */,
+			);
+			path = KeyboardUtility;
+			sourceTree = "<group>";
+		};
+		A914E026198B932500E01E39 /* AlertViewBlock */ = {
+			isa = PBXGroup;
+			children = (
+				A914E027198B933D00E01E39 /* AlertViewBlock.h */,
+				A914E028198B933D00E01E39 /* AlertViewBlock.m */,
+			);
+			path = AlertViewBlock;
 			sourceTree = "<group>";
 		};
 		A96547E6198B40F300F1A1DD = {
@@ -128,6 +176,10 @@
 		A9654821198B42B300F1A1DD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A914E026198B932500E01E39 /* AlertViewBlock */,
+				A914E022198B92B200E01E39 /* KeyboardUtility */,
+				A914E01E198B8B1600E01E39 /* LinearPartitionCollectionLayout */,
+				A914E01A198B8AC900E01E39 /* Utility */,
 				A914E016198B839F00E01E39 /* DLog */,
 				A9654830198B439700F1A1DD /* NavigationController */,
 				A9654822198B42B300F1A1DD /* LoadingView */,
@@ -219,13 +271,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A914E01D198B8AD500E01E39 /* Utility.m in Sources */,
 				A9654803198B40F300F1A1DD /* AppDelegate.m in Sources */,
+				A914E021198B8B2900E01E39 /* LinearPartitionCollectionLayout.m in Sources */,
 				A9654825198B42CD00F1A1DD /* LoadingView.m in Sources */,
 				A9654833198B43AA00F1A1DD /* NavigationViewController.m in Sources */,
 				A965482E198B437500F1A1DD /* LoadingViewController.m in Sources */,
 				A9654829198B431B00F1A1DD /* ViewController.m in Sources */,
 				A96547FF198B40F300F1A1DD /* main.m in Sources */,
+				A914E029198B933D00E01E39 /* AlertViewBlock.m in Sources */,
 				A914E019198B83AC00E01E39 /* DLog.m in Sources */,
+				A914E025198B92B200E01E39 /* KeyboardUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

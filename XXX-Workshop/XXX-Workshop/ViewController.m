@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AlertViewBlock.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
