@@ -14,6 +14,11 @@
 		A96547FF198B40F300F1A1DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A96547FE198B40F300F1A1DD /* main.m */; };
 		A9654803198B40F300F1A1DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9654802198B40F300F1A1DD /* AppDelegate.m */; };
 		A9654805198B40F300F1A1DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9654804198B40F300F1A1DD /* Images.xcassets */; };
+		A9654825198B42CD00F1A1DD /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9654824198B42CD00F1A1DD /* LoadingView.m */; };
+		A9654829198B431B00F1A1DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9654827198B431B00F1A1DD /* ViewController.m */; };
+		A965482E198B437500F1A1DD /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A965482C198B437500F1A1DD /* LoadingViewController.m */; };
+		A9654833198B43AA00F1A1DD /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9654832198B43AA00F1A1DD /* NavigationViewController.m */; };
+		A9654835198B444C00F1A1DD /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9654834198B444C00F1A1DD /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,15 @@
 		A9654802198B40F300F1A1DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A9654804198B40F300F1A1DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A965480B198B40F300F1A1DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A9654823198B42CD00F1A1DD /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		A9654824198B42CD00F1A1DD /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		A9654826198B431B00F1A1DD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A9654827198B431B00F1A1DD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A965482B198B437500F1A1DD /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		A965482C198B437500F1A1DD /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		A9654831198B43AA00F1A1DD /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		A9654832198B43AA00F1A1DD /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		A9654834198B444C00F1A1DD /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +90,12 @@
 		A96547F8198B40F300F1A1DD /* XXX-Workshop */ = {
 			isa = PBXGroup;
 			children = (
+				A9654821198B42B300F1A1DD /* Classes */,
 				A9654801198B40F300F1A1DD /* AppDelegate.h */,
 				A9654802198B40F300F1A1DD /* AppDelegate.m */,
+				A9654826198B431B00F1A1DD /* ViewController.h */,
+				A9654827198B431B00F1A1DD /* ViewController.m */,
+				A9654834198B444C00F1A1DD /* Storyboard.storyboard */,
 				A9654804198B40F300F1A1DD /* Images.xcassets */,
 				A96547F9198B40F300F1A1DD /* Supporting Files */,
 			);
@@ -93,6 +111,35 @@
 				A9654800198B40F300F1A1DD /* XXX-Workshop-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9654821198B42B300F1A1DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A9654830198B439700F1A1DD /* NavigationController */,
+				A9654822198B42B300F1A1DD /* LoadingView */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A9654822198B42B300F1A1DD /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				A9654823198B42CD00F1A1DD /* LoadingView.h */,
+				A9654824198B42CD00F1A1DD /* LoadingView.m */,
+				A965482B198B437500F1A1DD /* LoadingViewController.h */,
+				A965482C198B437500F1A1DD /* LoadingViewController.m */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		A9654830198B439700F1A1DD /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				A9654831198B43AA00F1A1DD /* NavigationViewController.h */,
+				A9654832198B43AA00F1A1DD /* NavigationViewController.m */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +195,7 @@
 			files = (
 				A96547FD198B40F300F1A1DD /* InfoPlist.strings in Resources */,
 				A9654805198B40F300F1A1DD /* Images.xcassets in Resources */,
+				A9654835198B444C00F1A1DD /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9654803198B40F300F1A1DD /* AppDelegate.m in Sources */,
+				A9654825198B42CD00F1A1DD /* LoadingView.m in Sources */,
+				A9654833198B43AA00F1A1DD /* NavigationViewController.m in Sources */,
+				A965482E198B437500F1A1DD /* LoadingViewController.m in Sources */,
+				A9654829198B431B00F1A1DD /* ViewController.m in Sources */,
 				A96547FF198B40F300F1A1DD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +348,7 @@
 				A965481D198B40F300F1A1DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
