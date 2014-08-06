@@ -10,14 +10,20 @@
 
 @class GoogleSearchImage;
 
-typedef void(^GoogleSearchImageCompletionBlock)(GoogleSearchImage* search, NSError* error);
+@protocol GoogleSearchImageDelegate <NSObject>
+
+-(void) googleSearchImageFinished:(GoogleSearchImage*) search;
+
+@end
+
+@class GoogleSearchImage;
 
 @interface GoogleSearchImage : NSObject
 {
-    GoogleSearchImageCompletionBlock _completionBlock;
 }
 
--(GoogleSearchImage*) initWithKeyword:(NSString*) keyword completionBlock:(GoogleSearchImageCompletionBlock) completionBlock;
+-(GoogleSearchImage*) initWithKeyword:(NSString*) keyword;
+-(void) loadNext;
 
 -(void) start;
 -(void) cancel;
@@ -25,6 +31,10 @@ typedef void(^GoogleSearchImageCompletionBlock)(GoogleSearchImage* search, NSErr
 @property (nonatomic, strong, readonly) NSString *keyword;
 @property (nonatomic, strong) NSMutableArray *result;
 @property (nonatomic, strong, readonly) NSMutableData *data;
+@property (nonatomic, weak) id<GoogleSearchImageDelegate> delegate;
+@property (nonatomic, assign, readonly) NSUInteger page;
+@property (nonatomic, assign, readonly) bool canLoadMore;
+@property (nonatomic, assign, readonly) bool loadingMore;
 
 @end
 
@@ -36,5 +46,6 @@ typedef void(^GoogleSearchImageCompletionBlock)(GoogleSearchImage* search, NSErr
 @property (nonatomic, assign) CGSize thumbnailSize;
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, assign) CGSize imageSize;
+@property (nonatomic, assign) NSUInteger page;
 
 @end

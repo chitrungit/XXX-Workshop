@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self performSegueWithIdentifier:@"showTransform3D" sender:self];
+    [self performSegueWithIdentifier:@"showLinearPartition" sender:self];
 }
 
 -(void)viewWillAppear:(BOOL)animated

@@ -17,30 +17,50 @@
 
 @implementation GoogleSearchImage
 
--(GoogleSearchImage *)initWithKeyword:(NSString *)keyword completionBlock:(GoogleSearchImageCompletionBlock)completionBlock
+-(GoogleSearchImage *)initWithKeyword:(NSString *)keyword
 {
     self=[super init];
     
-    _keyword=keyword;
-    _completionBlock=[completionBlock copy];
-    
-    NSString *text=[keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=%@&rsz=8&as_filetype=jpg",text]];
-    
-    NSURLRequest *request=[NSURLRequest requestWithURL:url];
-    _conn=[NSURLConnection connectionWithRequest:request delegate:self];
+    _keyword=[keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];;
     
     return self;
 }
 
+-(void) request
+{
+    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=%@&rsz=8&as_filetype=jpg&start=%i",_keyword,_page*8]];
+    
+    NSURLRequest *request=[NSURLRequest requestWithURL:url];
+    _conn=[NSURLConnection connectionWithRequest:request delegate:self];
+    
+    [_conn start];
+}
+
 -(void)start
 {
-    [_conn start];
+    _result=[NSMutableArray array];
+    _page=0;
+    _data=nil;
+    _canLoadMore=true;
+    _loadingMore=false;
+    
+    [self request];
 }
 
 -(void)cancel
 {
     [_conn cancel];
+}
+
+-(void)loadNext
+{
+    if(_loadingMore || !_canLoadMore)
+        return;
+    
+    _page++;
+    _loadingMore=true;
+    
+    [self request];
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -55,36 +75,50 @@
 {
     NSError *error=nil;
     NSDictionary *json=[NSJSONSerialization JSONObjectWithData:_data options:NSJSONReadingAllowFragments|NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error];
-    NSArray *images=json[@"responseData"][@"results"];
+    _data=nil;
     
-    _result=[NSMutableArray array];
-    for(NSDictionary *dict in images)
+    id responseData=json[@"responseData"];
+    
+    if(!responseData || [responseData isKindOfClass:[NSNull class]])
     {
-        [_result addObject:[GoogleImageObject makeWithDictionary:dict]];
+        _canLoadMore=false;
     }
+    else
+    {
+        _canLoadMore=true;
+        
+        NSArray *images=responseData[@"results"];
+        
+        for(NSDictionary *dict in images)
+        {
+            GoogleImageObject *obj=[GoogleImageObject makeWithDictionary:dict];
+            obj.page=_page;
+            [_result addObject:obj];
+        }
+    }
+    
+    _loadingMore=false;
+    _conn=nil;
     
     [self finish:nil];
 }
 
 -(void) finish:(NSError*) error
 {
-    if(_completionBlock)
-        _completionBlock(self,error);
-    
-    _completionBlock=nil;
-    
-    _conn=nil;
+    [self.delegate googleSearchImageFinished:self];
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    _conn=nil;
+    _canLoadMore=false;
+    _loadingMore=false;
+    
     [self finish:error];
 }
 
 -(void)dealloc
 {
-    _completionBlock=nil;
-    
     if(_conn)
     {
         [_conn cancel];
