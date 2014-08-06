@@ -30,7 +30,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self performSegueWithIdentifier:@"showLoadingController" sender:self];
+    [self performSegueWithIdentifier:@"showTransform3D" sender:self];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
