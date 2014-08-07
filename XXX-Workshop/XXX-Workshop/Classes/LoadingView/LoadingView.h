@@ -16,12 +16,14 @@
 @property (nonatomic, weak) UIView *centerView;
 @property (nonatomic, weak) UILabel *label;
 @property (nonatomic, assign) float labelMaxWidth;
+@property (nonatomic, assign) CGRect viewFrame;
 
 @end
 
 @interface UIView(LoadingView)
 
 -(void) showLoading;
+-(void) showLoadingWithRect:(CGRect) rect;
 -(void) showLoadingWithTitle:(NSString*) title;
 -(void) updateLoadingTitle:(NSString*) title;
 -(void) removeLoading;

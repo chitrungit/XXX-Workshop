@@ -322,11 +322,17 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="Ybf-eX-J33" customClass="GoogleSearchGallery">
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" keyboardDismissMode="onDrag" dataMode="prototypes" id="PWX-Ee-837" customClass="LinearPartitionGallery">
                                 <rect key="frame" x="0.0" y="30" width="320" height="386"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <collectionViewLayout key="collectionViewLayout" id="ocq-Xw-rQ3" customClass="LinearPartitionCollectionLayout"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MeE-AP-wP6" id="ocs-7S-oXL"/>
+                                    <outlet property="delegate" destination="MeE-AP-wP6" id="shP-Cs-VLK"/>
+                                    <outlet property="layoutDelegate" destination="MeE-AP-wP6" id="iWW-Bg-2fw"/>
+                                </connections>
+                            </collectionView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search google image" minimumFontSize="17" id="dKa-LQ-D76">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -342,7 +348,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Linear Partition Gallery" id="Ggn-Hp-lkW"/>
                     <connections>
-                        <outlet property="gallery" destination="Ybf-eX-J33" id="SKL-nT-2ne"/>
+                        <outlet property="gallery" destination="PWX-Ee-837" id="tZB-yX-BQk"/>
                         <outlet property="txt" destination="dKa-LQ-D76" id="cGB-lI-jQa"/>
                     </connections>
                 </viewController>

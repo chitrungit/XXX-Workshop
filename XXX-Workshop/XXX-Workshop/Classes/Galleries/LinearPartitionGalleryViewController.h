@@ -8,12 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@class GoogleSearchGallery;
+@class LinearPartitionGallery;
 
 @interface LinearPartitionGalleryViewController : UIViewController
 {
     __weak IBOutlet UITextField *txt;
-    __weak IBOutlet GoogleSearchGallery* gallery;
+    __weak IBOutlet LinearPartitionGallery* gallery;
 }
+
+@end
+
+@interface ImageCell : UICollectionViewCell
+
+-(void) loadWithURL:(NSURL*) url;
+
+@property (nonatomic, weak, readonly) UIImageView *imgv;
 
 @end

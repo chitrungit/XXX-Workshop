@@ -17,50 +17,32 @@
 
 @implementation GoogleSearchImage
 
--(GoogleSearchImage *)initWithKeyword:(NSString *)keyword
+-(GoogleSearchImage *)initWithKeyword:(NSString *)keyword pageSize:(NSUInteger)pageSize page:(NSUInteger)page
 {
     self=[super init];
     
-    _keyword=[keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];;
+    NSString *query=[keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];;
     
-    return self;
-}
-
--(void) request
-{
-    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=%@&rsz=8&as_filetype=jpg&start=%i",_keyword,_page*8]];
-    
+    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=%@&rsz=%i&as_filetype=jpg&start=%i",query,pageSize,page]];
     NSURLRequest *request=[NSURLRequest requestWithURL:url];
+    
     _conn=[NSURLConnection connectionWithRequest:request delegate:self];
     
-    [_conn start];
+    return self;
 }
 
 -(void)start
 {
     _result=[NSMutableArray array];
-    _page=0;
     _data=nil;
     _canLoadMore=true;
-    _loadingMore=false;
     
-    [self request];
+    [_conn start];
 }
 
 -(void)cancel
 {
     [_conn cancel];
-}
-
--(void)loadNext
-{
-    if(_loadingMore || !_canLoadMore)
-        return;
-    
-    _page++;
-    _loadingMore=true;
-    
-    [self request];
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -92,28 +74,22 @@
         for(NSDictionary *dict in images)
         {
             GoogleImageObject *obj=[GoogleImageObject makeWithDictionary:dict];
-            obj.page=_page;
             [_result addObject:obj];
         }
     }
-    
-    _loadingMore=false;
-    _conn=nil;
     
     [self finish:nil];
 }
 
 -(void) finish:(NSError*) error
 {
+    _conn=nil;
     [self.delegate googleSearchImageFinished:self];
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    _conn=nil;
     _canLoadMore=false;
-    _loadingMore=false;
-    
     [self finish:error];
 }
 
@@ -135,8 +111,8 @@
     GoogleImageObject *obj=[GoogleImageObject new];
     obj.thumbnailURL=dict[@"tbUrl"];
     obj.thumbnailSize=CGSizeMake([dict[@"tbWidth"] floatValue], [dict[@"tbHeight"] floatValue]);
-    obj.imageURL=dict[@"Url"];
-    obj.imageSize=CGSizeMake([dict[@"Width"] floatValue], [dict[@"Height"] floatValue]);
+    obj.imageURL=dict[@"url"];
+    obj.imageSize=CGSizeMake([dict[@"width"] floatValue], [dict[@"height"] floatValue]);
     
     return obj;
 }

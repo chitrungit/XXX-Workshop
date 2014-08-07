@@ -22,19 +22,15 @@
 {
 }
 
--(GoogleSearchImage*) initWithKeyword:(NSString*) keyword;
--(void) loadNext;
+-(GoogleSearchImage*) initWithKeyword:(NSString*) keyword pageSize:(NSUInteger) pageSize page:(NSUInteger) page;
 
 -(void) start;
 -(void) cancel;
 
-@property (nonatomic, strong, readonly) NSString *keyword;
 @property (nonatomic, strong) NSMutableArray *result;
 @property (nonatomic, strong, readonly) NSMutableData *data;
 @property (nonatomic, weak) id<GoogleSearchImageDelegate> delegate;
-@property (nonatomic, assign, readonly) NSUInteger page;
 @property (nonatomic, assign, readonly) bool canLoadMore;
-@property (nonatomic, assign, readonly) bool loadingMore;
 
 @end
 
@@ -46,6 +42,5 @@
 @property (nonatomic, assign) CGSize thumbnailSize;
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, assign) CGSize imageSize;
-@property (nonatomic, assign) NSUInteger page;
 
 @end

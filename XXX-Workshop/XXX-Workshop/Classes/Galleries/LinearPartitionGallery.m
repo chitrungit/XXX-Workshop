@@ -7,6 +7,7 @@
 //
 
 #import "LinearPartitionGallery.h"
+#import "LoadingView.h"
 
 @interface LinearPartitionGallery()
 {
@@ -21,53 +22,51 @@
 {
     [super awakeFromNib];
     
-    LinearPartitionCollectionLayout *linearPartitionLayout=[LinearPartitionCollectionLayout new];
-    linearPartitionLayout.delegate=self;
-    UICollectionView *view=[[UICollectionView alloc] initWithFrame:(CGRect){CGPointZero, self.frame.size} collectionViewLayout:linearPartitionLayout];
+    LinearPartitionCollectionLayout *linearPartitionLayout=(id)self.collectionViewLayout;
+    if(![linearPartitionLayout isKindOfClass:[LinearPartitionCollectionLayout class]])
+    {
+        LinearPartitionCollectionLayout *linearPartitionLayout=[LinearPartitionCollectionLayout new];
+        
+        self.collectionViewLayout=linearPartitionLayout;
+    }
     
-    view.dataSource=self;
-    view.delegate=self;
+    linearPartitionLayout.delegate=self.layoutDelegate;
+}
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+}
+
+-(LinearPartitionCollectionLayout *)linearParititonLayout
+{
+    return (id)self.collectionViewLayout;
+}
+
+-(void)showLoadMoreWithHeight:(float)height
+{
+    UIEdgeInsets insets=self.contentInset;
+    insets.bottom=height;
     
-    [self addSubview:view];
+    self.contentInset=insets;
     
-    _collectionView=view;
+    [self showLoadingWithRect:CGRectMake(0, self.contentSize.height, self.frame.size.width, height)];
 }
 
--(void)markFinishLoadMore:(bool)canLoadMore items:(NSArray *)items
+-(void)hideLoadMore
 {
-    _loadingMore=false;
-    _canLoadMore=canLoadMore;
-}
-
-#pragma mark LinearPartitionCollectionLayoutDelegate
-
--(CGSize)linearPartition:(LinearPartitionCollectionLayout *)layout sizeAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeZero;
-}
-
-#pragma mark UICollectionViewDataSource
-
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 0;
-}
-
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return 0;
-}
-
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return [UICollectionViewCell new];
-}
-
-#pragma mark UICollectionViewDelegate
-
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+    [self removeLoading];
     
+}
+
+-(void)setContentOffset:(CGPoint)contentOffset
+{
+//    if(self.loadingView)
+//    {
+//        NSLog(@"%f",contentOffset.y-self.loadingView.frame.origin.y);
+//    }
+    
+    [super setContentOffset:contentOffset];
 }
 
 @end

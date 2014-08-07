@@ -11,19 +11,19 @@
 
 @class LinearPartitionGallery;
 
-@protocol LinearPartitionGalleryDelegate <NSObject>
+@protocol LinearPartitionGalleryDataSource <UICollectionViewDataSource>
 
--(void) linearPartitionGalleryRequestLoadMore:(LinearPartitionGallery*) lGallery;
+-(void) linearPartitionGalleryLoadMore:(LinearPartitionGallery*) lGallery;
 
 @end
 
-@interface LinearPartitionGallery : UIView<LinearPartitionCollectionLayoutDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface LinearPartitionGallery : UICollectionView
 
--(void) markFinishLoadMore:(bool) canLoadMore items:(NSArray*) items;
+-(void) showLoadMoreWithHeight:(float) height;
+-(void) hideLoadMore;
 
-@property (nonatomic, readonly) bool loadingMore;
-@property (nonatomic, assign) bool canLoadMore;
-@property (nonatomic, weak, readonly) UICollectionView *collectionView;
-@property (nonatomic, weak) id<LinearPartitionGalleryDelegate> delegate;
+-(LinearPartitionCollectionLayout *)linearParititonLayout;
+@property (nonatomic, weak) id <LinearPartitionGalleryDataSource> dataSource;
+@property (nonatomic, weak) IBOutlet id<LinearPartitionCollectionLayoutDelegate> layoutDelegate;
 
 @end

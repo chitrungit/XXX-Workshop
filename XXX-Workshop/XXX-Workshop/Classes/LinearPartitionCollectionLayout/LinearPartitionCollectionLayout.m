@@ -30,6 +30,7 @@
     
     CGSize frameSize=self.collectionView.frame.size;
     float ideal_height = MAX(frameSize.height, frameSize.width) / 4;
+
     int itemCount=[self totalItemCount];
     
     _layoutAttributes=[[NSMutableDictionary alloc] initWithCapacity:itemCount];

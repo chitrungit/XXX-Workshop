@@ -79,7 +79,10 @@
 
 -(void)layoutSubviews
 {
-    self.frame=(CGRect){CGPointZero,self.superview.frame.size};
+    if(CGRectIsEmpty(self.viewFrame))
+        self.frame=(CGRect){CGPointZero,self.superview.frame.size};
+    else
+        self.frame=self.viewFrame;
     
     if(self.frame.size.width==0 || self.frame.size.height==0)
         return;
@@ -178,6 +181,14 @@ static char LoadingViewKey;
     [self addSubview:view];
     
     self.loadingView=view;
+}
+
+-(void)showLoadingWithRect:(CGRect)rect
+{
+    [self showLoading];
+ 
+    self.loadingView.viewFrame=rect;
+    self.loadingView.frame=rect;
 }
 
 -(void)showLoadingWithTitle:(NSString *)title
