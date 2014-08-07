@@ -9,11 +9,15 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "NavigationViewController.h"
+#import "SDWebImageManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[SDWebImageManager sharedManager].imageCache clearDisk];
+    [[SDWebImageManager sharedManager].imageCache clearMemory];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

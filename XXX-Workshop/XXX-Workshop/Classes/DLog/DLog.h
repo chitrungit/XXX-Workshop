@@ -14,7 +14,7 @@
 #define DLOG_NOTICE(dFormat, ...) DLogNotice(^NSString *{ return DLOG_STRING_FORMAT(dFormat, ##__VA_ARGS__);})
 #define DLOG_INFO(dFormat, ...) DLogInfo(^NSString *{ return DLOG_STRING_FORMAT(dFormat, ##__VA_ARGS__);})
 #define DLOG_DEBUG(dFormat, ...) DLogDebug(^NSString *{ return DLOG_STRING_FORMAT(dFormat, ##__VA_ARGS__);})
-
+#define DLOG_DOWNLOAD(dFormat, ...) DLogDownload(^NSString *{ return DLOG_STRING_FORMAT(dFormat, ##__VA_ARGS__);})
 
 
 NSString* DLOG_STRING_FORMAT(NSString* format, ...);
@@ -26,3 +26,4 @@ void DLogWarning(NSString*(^)());
 void DLogNotice(NSString*(^)());
 void DLogInfo(NSString*(^)());
 void DLogDebug(NSString*(^)());
+void DLogDownload(NSString*(^)());

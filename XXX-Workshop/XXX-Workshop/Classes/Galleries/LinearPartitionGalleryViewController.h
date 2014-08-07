@@ -23,5 +23,7 @@
 -(void) loadWithURL:(NSURL*) url;
 
 @property (nonatomic, weak, readonly) UIImageView *imgv;
+@property (nonatomic, weak, readonly) UILabel *lbl;
+@property (nonatomic, strong) NSIndexPath *indexPath;
 
 @end

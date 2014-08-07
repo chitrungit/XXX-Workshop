@@ -18,9 +18,10 @@ typedef NS_OPTIONS(NSUInteger, DLOG_TYPE)
     DLOG_TYPE_NOTICE = 1 << 5,
     DLOG_TYPE_INFO = 1 << 6,
     DLOG_TYPE_DEBUG = 1 << 7,
+    DLOG_TYPE_DOWNLOAD = 1 << 8,
 };
 
-const DLOG_TYPE DLOG_CURRENT_LEVEL=DLOG_TYPE_DEBUG | DLOG_TYPE_INFO;
+const DLOG_TYPE DLOG_CURRENT_LEVEL=DLOG_TYPE_DEBUG | DLOG_TYPE_INFO | DLOG_TYPE_DOWNLOAD;
 
 NSString* DLOG_STRING_FORMAT(NSString* format, ...)
 {
@@ -79,4 +80,9 @@ void DLogInfo(NSString*(^logString)())
 void DLogDebug(NSString*(^logString)())
 {
     DLog(DLOG_TYPE_DEBUG, logString);
+}
+
+void DLogDownload(NSString*(^logString)())
+{
+    DLog(DLOG_TYPE_DOWNLOAD, logString);
 }

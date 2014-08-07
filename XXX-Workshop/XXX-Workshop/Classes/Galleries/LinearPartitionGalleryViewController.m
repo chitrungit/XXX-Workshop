@@ -91,28 +91,6 @@
     _search=nil;
 
     [gallery reloadData];
-//    if(_page==1)
-//    {
-//        [gallery performBatchUpdates:^{
-//            [gallery insertSections:[NSIndexSet indexSetWithIndex:0]];
-//        } completion:^(BOOL finished) {
-//            if(_canLoadMore)
-//                [gallery showLoadMoreWithHeight:80];
-//            else
-//                [gallery hideLoadMore];
-//        }];
-//    }
-//    else
-//    {
-//        NSMutableArray *array=[NSMutableArray array];
-//        
-//        for(int i=0;i<search.result.count;i++)
-//        {
-//            [array addObject:[NSIndexPath indexPathForItem:_images.count-search.result.count+1+i inSection:0]];
-//        }
-//        
-//        [gallery insertItemsAtIndexPaths:array];
-//    }
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -140,6 +118,8 @@
     GoogleImageObject *obj=_images[indexPath.item];
     
     cell.backgroundColor=[UIColor clearColor];
+    
+    cell.indexPath=indexPath;
     [cell loadWithURL:[NSURL URLWithString:obj.thumbnailURL]];
     
     if(indexPath.row==_images.count-1)
@@ -178,6 +158,15 @@
         
         [self addSubview:imgv];
         
+        UILabel *label=[[UILabel alloc] initWithFrame:frame];
+        label.textColor=[UIColor redColor];
+        
+        label.autoresizingMask=UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        label.textAlignment=NSTextAlignmentCenter;
+        
+        [self addSubview:label];
+        
+        _lbl=label;
         _imgv=imgv;
     }
     return self;
@@ -186,6 +175,7 @@
 -(void)loadWithURL:(NSURL *)url
 {
     [self.imgv sd_setImageWithURL:url placeholderImage:nil options:SDWebImageProgressiveDownload];
+    self.lbl.text=[NSString stringWithFormat:@"%02i",_indexPath.item];
 }
 
 @end

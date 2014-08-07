@@ -29,7 +29,7 @@
     [super prepareLayout];
     
     CGSize frameSize=self.collectionView.frame.size;
-    float ideal_height = MAX(frameSize.height, frameSize.width) / 4;
+    float ideal_height = MAX(frameSize.height, frameSize.width) / 2;
 
     int itemCount=[self totalItemCount];
     
@@ -38,6 +38,7 @@
     CGRect newFrames[itemCount];
     float seq[itemCount];
     float total_width=0;
+    float cellDistance = 5;
     
     int count=0;
     NSIndexPath *indexPath=nil;
@@ -49,6 +50,10 @@
             
             CGSize size=[self.delegate linearPartition:self sizeAtIndexPath:indexPath];
             CGSize newSize=CGSizeResizeToHeight(ideal_height, size);
+            
+            if(newSize.width>frameSize.width-cellDistance*2)
+                newSize=CGSizeResizeToWidth(frameSize.width-cellDistance*2, newSize);
+            
             newFrames[count]=(CGRect){CGPointZero, newSize};
             seq[count]=newSize.width;
             total_width+=seq[count];
@@ -102,7 +107,6 @@
     }
     ranges[0][0] = 0;
     
-    float cellDistance = 5;
     float heightOffset = cellDistance, widthOffset;
     float frameWidth;
     for (int i = 0; i < K; i++) {
