@@ -45,6 +45,43 @@
     _images=[NSMutableArray array];
     _page=0;
     [txt becomeFirstResponder];
+    
+    NSString *mainBundlePath=[[NSBundle mainBundle] resourcePath];
+    mainBundlePath=[mainBundlePath stringByAppendingPathComponent:@"Images"];
+
+    NSError *error=nil;
+    NSArray *images=[[NSFileManager defaultManager] contentsOfDirectoryAtPath:mainBundlePath error:&error];
+
+    images=[images filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF CONTAINS '.png'"]];
+    
+    for(NSString *img in images)
+    {
+        NSString *imgPath=[mainBundlePath stringByAppendingPathComponent:img];
+        UIImage *uiImage=[UIImage imageWithContentsOfFile:imgPath];
+        
+        GoogleImageObject *obj=[GoogleImageObject new];
+        obj.imagePath=imgPath;
+        obj.imageSize=uiImage.size;
+        
+        [_images addObject:obj];
+        
+        NSLog(@"imgPath %@ %@",img,NSStringFromCGSize(uiImage.size));
+    }
+    
+    [gallery reloadData];
+}
+
+-(void)linearPartitionGalleryLoadMore:(LinearPartitionGallery *)lGallery
+{
+    return;
+    if(!_loadingMore)
+    {
+        NSLog(@"more");
+        
+        _loadingMore=true;
+        
+        [self loadMore];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,6 +127,11 @@
 
     _search=nil;
 
+    if(_canLoadMore)
+        [gallery showLoadMoreWithHeight:80];
+    else
+        [gallery hideLoadMore];
+    
     [gallery reloadData];
 }
 
@@ -120,17 +162,8 @@
     cell.backgroundColor=[UIColor clearColor];
     
     cell.indexPath=indexPath;
-    [cell loadWithURL:[NSURL URLWithString:obj.thumbnailURL]];
-    
-    if(indexPath.row==_images.count-1)
-    {
-        if(!_loadingMore)
-        {
-            _loadingMore=true;
-            
-            [self loadMore];
-        }
-    }
+    [cell loadWithImagePath:obj.imagePath];
+//    [cell loadWithURL:[NSURL URLWithString:obj.thumbnailURL]];
     
     return cell;
 }
@@ -155,11 +188,14 @@
         frame.origin=CGPointZero;
         UIImageView *imgv=[[UIImageView alloc] initWithFrame:frame];
         imgv.autoresizingMask=UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        imgv.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0.5 alpha:0.5];
         
         [self addSubview:imgv];
         
         UILabel *label=[[UILabel alloc] initWithFrame:frame];
+        label.font=[UIFont systemFontOfSize:12];
         label.textColor=[UIColor redColor];
+        label.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0.5 alpha:0.5];
         
         label.autoresizingMask=UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         label.textAlignment=NSTextAlignmentCenter;
@@ -176,6 +212,12 @@
 {
     [self.imgv sd_setImageWithURL:url placeholderImage:nil options:SDWebImageProgressiveDownload];
     self.lbl.text=[NSString stringWithFormat:@"%02i",_indexPath.item];
+}
+
+-(void)loadWithImagePath:(NSString *)path
+{
+    self.imgv.image=[UIImage imageWithContentsOfFile:path];
+    self.lbl.text=[NSString stringWithFormat:@"%02i %ix%i",_indexPath.item,(int)self.imgv.image.size.width, (int)self.imgv.image.size.height];
 }
 
 @end

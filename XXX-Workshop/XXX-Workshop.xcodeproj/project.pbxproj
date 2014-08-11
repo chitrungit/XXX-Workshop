@@ -29,6 +29,7 @@
 		A965482E198B437500F1A1DD /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A965482C198B437500F1A1DD /* LoadingViewController.m */; };
 		A9654833198B43AA00F1A1DD /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9654832198B43AA00F1A1DD /* NavigationViewController.m */; };
 		A9654835198B444C00F1A1DD /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9654834198B444C00F1A1DD /* Storyboard.storyboard */; };
+		A97AA5F1199342DB005B0FCE /* Images in Resources */ = {isa = PBXBuildFile; fileRef = A97AA5F0199342DB005B0FCE /* Images */; };
 		A97D57DD1991D20A00AD5C43 /* GoogleSearchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D57DC1991D20A00AD5C43 /* GoogleSearchImage.m */; };
 		A97D57E91991D9CA00AD5C43 /* LinearPartitionGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D57E81991D9CA00AD5C43 /* LinearPartitionGallery.m */; };
 		A97D57F01991DB4500AD5C43 /* LinearPartitionGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D57EF1991DB4500AD5C43 /* LinearPartitionGalleryViewController.m */; };
@@ -91,6 +92,7 @@
 		A9654831198B43AA00F1A1DD /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		A9654832198B43AA00F1A1DD /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		A9654834198B444C00F1A1DD /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		A97AA5F0199342DB005B0FCE /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		A97D57DB1991D20A00AD5C43 /* GoogleSearchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleSearchImage.h; sourceTree = "<group>"; };
 		A97D57DC1991D20A00AD5C43 /* GoogleSearchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleSearchImage.m; sourceTree = "<group>"; };
 		A97D57E71991D9CA00AD5C43 /* LinearPartitionGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearPartitionGallery.h; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		A912C3461990A9CE00390166 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A97AA5F0199342DB005B0FCE /* Images */,
 				A912C3471990A9D700390166 /* bird.png */,
 			);
 			path = Resources;
@@ -450,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97AA5F1199342DB005B0FCE /* Images in Resources */,
 				A912C3481990A9D700390166 /* bird.png in Resources */,
 				A96547FD198B40F300F1A1DD /* InfoPlist.strings in Resources */,
 				A9654805198B40F300F1A1DD /* Images.xcassets in Resources */,

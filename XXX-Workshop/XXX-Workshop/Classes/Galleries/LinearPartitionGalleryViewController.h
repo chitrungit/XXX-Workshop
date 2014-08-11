@@ -21,6 +21,7 @@
 @interface ImageCell : UICollectionViewCell
 
 -(void) loadWithURL:(NSURL*) url;
+-(void) loadWithImagePath:(NSString*) path;
 
 @property (nonatomic, weak, readonly) UIImageView *imgv;
 @property (nonatomic, weak, readonly) UILabel *lbl;

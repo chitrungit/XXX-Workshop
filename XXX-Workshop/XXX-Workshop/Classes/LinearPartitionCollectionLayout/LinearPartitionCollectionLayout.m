@@ -29,9 +29,15 @@
     [super prepareLayout];
     
     CGSize frameSize=self.collectionView.frame.size;
-    float ideal_height = MAX(frameSize.height, frameSize.width) / 2;
-
     int itemCount=[self totalItemCount];
+    
+    if(itemCount==0)
+    {
+        _contentSize=CGSizeZero;
+        return;
+    }
+    
+    float ideal_height = MAX(frameSize.height, frameSize.width) / 2;
     
     _layoutAttributes=[[NSMutableDictionary alloc] initWithCapacity:itemCount];
     
@@ -119,7 +125,7 @@
         
         float ratio = frameWidth / rowWidth;
         widthOffset = 0;
-        
+
         for (int j = ranges[i][0]; j <= ranges[i][1]; j++) {
             newFrames[j].size.width *= ratio;
             newFrames[j].size.height *= ratio;
@@ -128,6 +134,7 @@
             
             widthOffset += newFrames[j].size.width;
         }
+
         heightOffset += newFrames[ranges[i][0]].size.height + cellDistance;
     }
     

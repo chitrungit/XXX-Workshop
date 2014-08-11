@@ -42,5 +42,6 @@
 @property (nonatomic, assign) CGSize thumbnailSize;
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, assign) CGSize imageSize;
+@property (nonatomic, strong) NSString *imagePath;
 
 @end

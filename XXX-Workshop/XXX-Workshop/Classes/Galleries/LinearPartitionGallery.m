@@ -36,6 +36,15 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
+    
+    [self alignLoadingMore];
+}
+
+-(void)setContentSize:(CGSize)contentSize
+{
+    [super setContentSize:contentSize];
+    
+    [self alignLoadingMore];
 }
 
 -(LinearPartitionCollectionLayout *)linearParititonLayout
@@ -51,22 +60,68 @@
     self.contentInset=insets;
     
     [self showLoadingWithRect:CGRectMake(0, self.contentSize.height, self.frame.size.width, height)];
+    
+    [self alignLoadingMore];
 }
 
 -(void)hideLoadMore
 {
     [self removeLoading];
-    
+    [self alignLoadingMore];
+}
+
+-(void) alignLoadingMore
+{
+    if(self.loadingView)
+    {
+        bool needLayout=false;
+        
+        UIEdgeInsets insets=self.contentInset;
+        
+        if(!needLayout)
+            needLayout=insets.bottom!=self.loadingView.frame.size.height;
+        
+        insets.bottom=self.loadingView.frame.size.height;
+        
+        self.contentInset=insets;
+        
+        CGRect rect=self.loadingView.frame;
+        
+        if(!needLayout)
+            needLayout=rect.origin.y!=self.contentSize.height;
+        
+        rect.origin.y=self.contentSize.height;
+        self.loadingView.frame=rect;
+        
+        if(needLayout)
+            [self setNeedsLayout];
+    }
+    else
+    {
+        UIEdgeInsets insets=self.contentInset;
+        
+        bool needLayout=insets.bottom!=0;
+        insets.bottom=0;
+        
+        self.contentInset=insets;
+        
+        if(needLayout)
+            [self setNeedsLayout];
+    }
 }
 
 -(void)setContentOffset:(CGPoint)contentOffset
 {
-//    if(self.loadingView)
-//    {
-//        NSLog(@"%f",contentOffset.y-self.loadingView.frame.origin.y);
-//    }
-    
     [super setContentOffset:contentOffset];
+    
+    if(self.loadingView)
+    {
+        float offsetY=contentOffset.y+self.frame.size.height;
+        float lY=self.loadingView.frame.origin.y;
+        
+        if(offsetY-lY>0)
+            [self.dataSource linearPartitionGalleryLoadMore:self];
+    }
 }
 
 @end
