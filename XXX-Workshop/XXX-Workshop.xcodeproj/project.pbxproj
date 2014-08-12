@@ -96,6 +96,7 @@
 		A97D58211991E27900AD5C43 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D580F1991E27900AD5C43 /* UIImageView+HighlightedWebCache.m */; };
 		A97D58221991E27900AD5C43 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D58111991E27900AD5C43 /* UIImageView+WebCache.m */; };
 		A97D58231991E27900AD5C43 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D58131991E27900AD5C43 /* UIView+WebCacheOperation.m */; };
+		A9B864451999FC0200B14E11 /* DynamicHeightTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B864441999FC0200B14E11 /* DynamicHeightTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -248,6 +249,8 @@
 		A97D58111991E27900AD5C43 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		A97D58121991E27900AD5C43 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		A97D58131991E27900AD5C43 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		A9B864431999FC0200B14E11 /* DynamicHeightTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicHeightTableCell.h; sourceTree = "<group>"; };
+		A9B864441999FC0200B14E11 /* DynamicHeightTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicHeightTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +411,7 @@
 		A9654821198B42B300F1A1DD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9B864421999FBDA00B14E11 /* DynamicHeightTableCell */,
 				A97C23C11999B0680063BEFE /* TableTemplate */,
 				A96EBE5A1998699600DFFCEE /* AFOperation */,
 				A97D57E21991D9A900AD5C43 /* Galleries */,
@@ -627,6 +631,15 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		A9B864421999FBDA00B14E11 /* DynamicHeightTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				A9B864431999FC0200B14E11 /* DynamicHeightTableCell.h */,
+				A9B864441999FC0200B14E11 /* DynamicHeightTableCell.m */,
+			);
+			path = DynamicHeightTableCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -772,6 +785,7 @@
 				A96EBE561998692900DFFCEE /* UIImageView+AFNetworking.m in Sources */,
 				A97D581D1991E27900AD5C43 /* UIButton+WebCache.m in Sources */,
 				A96EBE4B1998692900DFFCEE /* AFHTTPSessionManager.m in Sources */,
+				A9B864451999FC0200B14E11 /* DynamicHeightTableCell.m in Sources */,
 				A96EBE501998692900DFFCEE /* AFURLResponseSerialization.m in Sources */,
 				A914E025198B92B200E01E39 /* KeyboardUtility.m in Sources */,
 			);
