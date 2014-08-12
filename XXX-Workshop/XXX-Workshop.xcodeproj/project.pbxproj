@@ -76,6 +76,7 @@
 		A97C024619985C36006459C2 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = A97C022919985C36006459C2 /* 9.png */; };
 		A97C024719985C36006459C2 /* 90.png in Resources */ = {isa = PBXBuildFile; fileRef = A97C022A19985C36006459C2 /* 90.png */; };
 		A97C024819985C36006459C2 /* 98.png in Resources */ = {isa = PBXBuildFile; fileRef = A97C022B19985C36006459C2 /* 98.png */; };
+		A97C23C41999B3810063BEFE /* TableTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C23C31999B3810063BEFE /* TableTemplate.m */; };
 		A97D57DD1991D20A00AD5C43 /* GoogleSearchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D57DC1991D20A00AD5C43 /* GoogleSearchImage.m */; };
 		A97D57E91991D9CA00AD5C43 /* LinearPartitionGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D57E81991D9CA00AD5C43 /* LinearPartitionGallery.m */; };
 		A97D57F01991DB4500AD5C43 /* LinearPartitionGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D57EF1991DB4500AD5C43 /* LinearPartitionGalleryViewController.m */; };
@@ -176,6 +177,7 @@
 		A96EBE481998692900DFFCEE /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		A96EBE5B19986A3700DFFCEE /* AFOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOperation.h; sourceTree = "<group>"; };
 		A96EBE5C19986A3700DFFCEE /* AFOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOperation.m; sourceTree = "<group>"; };
+		A9707A521998AF9A0076DAE6 /* libtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtest.a; path = "../../../Library/Developer/Xcode/DerivedData/test-dbfowrtrghcvoggcpatpiufpeimi/Build/Products/Debug-iphoneos/libtest.a"; sourceTree = "<group>"; };
 		A97C020F19985C36006459C2 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		A97C021019985C36006459C2 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
 		A97C021119985C36006459C2 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
@@ -205,6 +207,8 @@
 		A97C022919985C36006459C2 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		A97C022A19985C36006459C2 /* 90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 90.png; sourceTree = "<group>"; };
 		A97C022B19985C36006459C2 /* 98.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 98.png; sourceTree = "<group>"; };
+		A97C23C21999B3810063BEFE /* TableTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTemplate.h; sourceTree = "<group>"; };
+		A97C23C31999B3810063BEFE /* TableTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTemplate.m; sourceTree = "<group>"; };
 		A97D57DB1991D20A00AD5C43 /* GoogleSearchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleSearchImage.h; sourceTree = "<group>"; };
 		A97D57DC1991D20A00AD5C43 /* GoogleSearchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleSearchImage.m; sourceTree = "<group>"; };
 		A97D57E71991D9CA00AD5C43 /* LinearPartitionGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearPartitionGallery.h; sourceTree = "<group>"; };
@@ -364,6 +368,7 @@
 		A96547F1198B40F300F1A1DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9707A521998AF9A0076DAE6 /* libtest.a */,
 				A96547F2198B40F300F1A1DD /* Foundation.framework */,
 				A96547F4198B40F300F1A1DD /* CoreGraphics.framework */,
 				A96547F6198B40F300F1A1DD /* UIKit.framework */,
@@ -403,6 +408,7 @@
 		A9654821198B42B300F1A1DD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A97C23C11999B0680063BEFE /* TableTemplate */,
 				A96EBE5A1998699600DFFCEE /* AFOperation */,
 				A97D57E21991D9A900AD5C43 /* Galleries */,
 				A912C3421990A83700390166 /* Transform3D */,
@@ -533,6 +539,15 @@
 				A97C022B19985C36006459C2 /* 98.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		A97C23C11999B0680063BEFE /* TableTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				A97C23C21999B3810063BEFE /* TableTemplate.h */,
+				A97C23C31999B3810063BEFE /* TableTemplate.m */,
+			);
+			path = TableTemplate;
 			sourceTree = "<group>";
 		};
 		A97D57D91991D1FC00AD5C43 /* Google */ = {
@@ -720,6 +735,7 @@
 				A97D58211991E27900AD5C43 /* UIImageView+HighlightedWebCache.m in Sources */,
 				A914E021198B8B2900E01E39 /* LinearPartitionCollectionLayout.m in Sources */,
 				A97D58181991E27900AD5C43 /* SDWebImageDecoder.m in Sources */,
+				A97C23C41999B3810063BEFE /* TableTemplate.m in Sources */,
 				A97D58151991E27900AD5C43 /* NSData+ImageContentType.m in Sources */,
 				A97D57DD1991D20A00AD5C43 /* GoogleSearchImage.m in Sources */,
 				A97D57F01991DB4500AD5C43 /* LinearPartitionGalleryViewController.m in Sources */,
@@ -855,6 +871,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XXX-Workshop/XXX-Workshop-Prefix.pch";
 				INFOPLIST_FILE = "XXX-Workshop/XXX-Workshop-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/test-dbfowrtrghcvoggcpatpiufpeimi/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -869,6 +889,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XXX-Workshop/XXX-Workshop-Prefix.pch";
 				INFOPLIST_FILE = "XXX-Workshop/XXX-Workshop-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/test-dbfowrtrghcvoggcpatpiufpeimi/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
