@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>26FB04B8-4579-44CC-AD6E-35F50860570D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>XXX-Workshop</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C83FA6CA-F6D0-48DE-B51F-6DA690AA75DB</key>
+		<string>https://github.com/chitrungit/XXX-Workshop.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>XXX-Workshop/XXX-Workshop.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C83FA6CA-F6D0-48DE-B51F-6DA690AA75DB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chitrungit/XXX-Workshop.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C83FA6CA-F6D0-48DE-B51F-6DA690AA75DB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C83FA6CA-F6D0-48DE-B51F-6DA690AA75DB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XXX-Workshop</string>
+		</dict>
+	</array>
+</dict>
+</plist>
