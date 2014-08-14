@@ -10,9 +10,6 @@
 
 @protocol DefaultCell <NSObject>
 
-+(void) registerCell:(UITableView*) table;
-+(id) dequeueCell:(UITableView*) table;
-
 +(NSString*) reuseIdentifier;
 
 @end
@@ -21,5 +18,38 @@
 
 -(float) calculatorHeight;
 -(void) loadImages;
+
+@end
+
+@interface EmptyCell : UITableViewCell<DefaultCell>
+
+@end
+
+@interface UITableView(EmptyCell)
+
+-(void) registerEmptyCell;
+-(EmptyCell*) emptyCell;
+
+@end
+
+@interface LoadingCell : UITableViewCell<DefaultCell>
+
+@property (nonatomic, weak, readonly) UIActivityIndicatorView *activityIndicator;
+
+@end
+
+@interface UITableView(LoadingCell)
+
+-(void) registerLoadingCell;
+-(LoadingCell*) loadingCell;
+
+@end
+
+@interface UITableView(LoadingView)
+
+-(UIView*) showLoadingView;
+-(void) removeLoadingView;
+
+@property (nonatomic, weak, readwrite) UIView *loadingView;
 
 @end

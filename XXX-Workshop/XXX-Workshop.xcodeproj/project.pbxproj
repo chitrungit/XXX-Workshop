@@ -64,6 +64,7 @@
 		A97D57E91991D9CA00AD5C43 /* LinearPartitionGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D57E81991D9CA00AD5C43 /* LinearPartitionGallery.m */; };
 		A97D57F01991DB4500AD5C43 /* LinearPartitionGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D57EF1991DB4500AD5C43 /* LinearPartitionGalleryViewController.m */; };
 		A9AD9487199C683100EC29DA /* TableViewCells.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AD9486199C683100EC29DA /* TableViewCells.m */; };
+		A9AD948D199C733200EC29DA /* TableTemplatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AD948C199C733200EC29DA /* TableTemplatesViewController.m */; };
 		E43698124A35405AB64FFABD /* libPods-XXX-Workshop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A7FEB263D24FA385550443 /* libPods-XXX-Workshop.a */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +151,8 @@
 		A97D57EF1991DB4500AD5C43 /* LinearPartitionGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearPartitionGalleryViewController.m; sourceTree = "<group>"; };
 		A9AD9485199C683100EC29DA /* TableViewCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCells.h; sourceTree = "<group>"; };
 		A9AD9486199C683100EC29DA /* TableViewCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCells.m; sourceTree = "<group>"; };
+		A9AD948B199C733200EC29DA /* TableTemplatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTemplatesViewController.h; sourceTree = "<group>"; };
+		A9AD948C199C733200EC29DA /* TableTemplatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTemplatesViewController.m; sourceTree = "<group>"; };
 		D5A7FEB263D24FA385550443 /* libPods-XXX-Workshop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XXX-Workshop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5944A732A5846E9A9FE7EB2 /* Pods-XXX-Workshop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXX-Workshop.xcconfig"; path = "Pods/Pods-XXX-Workshop.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -402,6 +405,8 @@
 			children = (
 				A97C23C21999B3810063BEFE /* TableTemplates.h */,
 				A97C23C31999B3810063BEFE /* TableTemplates.m */,
+				A9AD948B199C733200EC29DA /* TableTemplatesViewController.h */,
+				A9AD948C199C733200EC29DA /* TableTemplatesViewController.m */,
 			);
 			path = TableTemplate;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				A912C3401990845C00390166 /* PerspectivePageViewController.m in Sources */,
 				A914E021198B8B2900E01E39 /* LinearPartitionCollectionLayout.m in Sources */,
 				A97C23C41999B3810063BEFE /* TableTemplates.m in Sources */,
+				A9AD948D199C733200EC29DA /* TableTemplatesViewController.m in Sources */,
 				A97D57DD1991D20A00AD5C43 /* GoogleSearchImage.m in Sources */,
 				A97D57F01991DB4500AD5C43 /* LinearPartitionGalleryViewController.m in Sources */,
 				A914E02E198BA04B00E01E39 /* AlphaColorView.m in Sources */,

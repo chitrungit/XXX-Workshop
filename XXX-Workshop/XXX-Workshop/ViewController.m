@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self performSegueWithIdentifier:@"showLinearPartition" sender:self];
+    [self performSegueWithIdentifier:@"showTableTemplate" sender:self];
 }
 
 -(void)viewWillAppear:(BOOL)animated
