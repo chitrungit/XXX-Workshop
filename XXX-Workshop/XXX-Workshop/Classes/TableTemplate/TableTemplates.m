@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 XXX. All rights reserved.
 //
 
-#import "TableTemplate.h"
+#import "TableTemplates.h"
 
 @interface TableTemplate()
 
@@ -18,17 +18,33 @@
 {
     [super layoutSubviews];
     
+    UIEdgeInsets edgeInsets=self.contentInset;
+    
+    if(_canRefresh)
+    {
+        edgeInsets.top=80;
+    }
+
     if(_canLoadMore)
     {
-        self.contentInset=UIEdgeInsetsMake(0, 0, 80, 0);
-        self.scrollIndicatorInsets=self.contentInset;
+        edgeInsets.bottom=80;
     }
+    
+    self.contentInset=edgeInsets;
 }
 
 -(void)markFinishedLoadMore:(bool)canLoadMore
 {
     _loadingMore=false;
     _canLoadMore=canLoadMore;
+    
+    [self reloadData];
+}
+
+-(void)markFinishedRefresh:(bool)canRefresh
+{
+    _refreshing=false;
+    _canRefresh=canRefresh;
     
     [self reloadData];
 }

@@ -13,17 +13,21 @@
 @protocol TableTemplateDataSource <UITableViewDataSource>
 
 -(void) tableTemplateLoadMore:(TableTemplate*) table;
+-(void) tableTemplateRefresh:(TableTemplate*) table;
 
 @end
 
 @interface TableTemplate : UITableView
 
 -(void) markFinishedLoadMore:(bool) canLoadMore;
+-(void) markFinishedRefresh:(bool) canRefresh;
 
 @property (nonatomic, assign) unsigned int pageSize;
 @property (nonatomic, assign) unsigned int page;
 @property (nonatomic, assign) bool canLoadMore;
+@property (nonatomic, assign) bool canRefresh;
 @property (nonatomic, readonly) bool loadingMore;
+@property (nonatomic, readonly) bool refreshing;
 @property (nonatomic, weak) id<TableTemplateDataSource> dataSource;
 
 @end
