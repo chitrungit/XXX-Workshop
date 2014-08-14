@@ -12,6 +12,7 @@
 
 @protocol TableTemplateDataSource <UITableViewDataSource>
 
+@optional
 -(void) tableTemplateLoadMore:(TableTemplate*) table;
 -(void) tableTemplateRefresh:(TableTemplate*) table;
 
